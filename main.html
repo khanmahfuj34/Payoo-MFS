@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payooo</title>
 </head>
 <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -24,11 +24,11 @@
                 <h1 class="text-2xl font-bold mb-2">Welcome to Payooo!</h1>
                 <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
                 <div class="cards grid grid-cols-3 mt-14 p-2 gap-4 ">
-                    <div class="box border rounded-lg p-4 text-center cursor-pointer">
+                    <div id="add-money-box" class="box border rounded-lg p-4 text-center cursor-pointer">
                         <img class="mx-auto" src="./assets/wallet1.png" alt="">
                         <h3 class="font-bold">Add Money</h3>
                     </div>
-                    <div class="box border rounded-lg p-4 text-center  cursor-pointer">
+                    <div id="cashout-box" class="box border rounded-lg p-4 text-center  cursor-pointer">
                         <img class="mx-auto" src="./assets/send1.png" alt="">
                         <h3 class="font-bold">Cashout</h3>
                     </div>
@@ -49,7 +49,7 @@
                         <h3 class="font-bold">Transaction</h3>
                     </div>
                 </div>
-                <section class="add-money mt-10 p-3">
+                <section id="addmoney" class="add-money mt-10 p-3">
                     <h1 class="font-bold color-blue text-2xl">Add Money</h1>
                     <div class="">
                         <div class="hero-content flex-col lg:flex-row-reverse">
@@ -85,11 +85,36 @@
                     </div>
                 </section>
             </section>
+            <section id="Cashout" class=" mt-10 p-3">
+                <h1 class="font-bold color-blue text-2xl">Cashout</h1>
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+
+                        <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                            <div class="card-body">
+
+                                <fieldset class="fieldset">
+                                    <label class="label">Bank Agent Number</label>
+                                    <input id="Account-Number" type="number" class="input" placeholder="Enter 11 digit agent number" />
+                                    <label class="label">Amount to withdraw</label>
+                                    <input id="cashout-amount" value="" type="number" class="input" placeholder="Amount to withdraw" />
+                                    <label class="label">PIN Number</label>
+                                    <input id="cashout-pin" value="1234" type="password " class="input" placeholder="Enter 4 digit pin number" />
+
+                                    <button id="cashout-btn" class="btn border-none btn-neutral mt-4 font-bold cursor-pointer rounded-2xl bg-blue-600">Cash Out</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </header>
 
     </section>
     <script src="./script/addmoney.js"></script>
+    <script src="./script/toggle.js"></script>
+    <script src="./script/cashout.js"></script>
 </body>
 
 </html>
